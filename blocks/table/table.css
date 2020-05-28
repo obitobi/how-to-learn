@@ -1,0 +1,12 @@
+@import "__cell/table__cell.css";
+@import "__heading/table__heading.css";
+@import "__text/table__text.css";
+@import "_theme_dark/table_theme_dark.css";
+
+.table {
+  display: flex;
+  width: 1100px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  z-index: 1;
+}
