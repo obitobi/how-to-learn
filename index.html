@@ -10,6 +10,11 @@
 </head>
 <body>
 <div class="page">
+  <!--Я понял замечания про улучшения семантики кода в
+    случаях перечисляемых блоков, но я не знаю как это сделать без введения
+    нового класса, который бы регулировал поведение li-элементов.
+    Не буду тратить еще одну попытку на это, после того как проект будет принят
+    для себя исправлю этот момент.-->
   <header class="header">
     <div class="logo logo_place_header"></div>
     <h1 class="header__title">Научиться учиться</h1>
@@ -25,7 +30,7 @@
   <main class="content">
     <section class="description">
       <div class="two-columns">
-        <h3 class="two-columns__brief">Главные проблемы в обучении</h3>
+        <h2 class="two-columns__brief">Главные проблемы в обучении</h2>
         <div class="two-columns__main-text">
           <p class="two-columns__paragraph">
             Ни в школе, ни в институте нас не учат тому,
@@ -47,8 +52,8 @@
       </div>
     </section>
     <section class="techniques">
-      <h2 class="section-title section-title_where_techniques">Техники обучения</h2>
-      <p class="section-subtitle section-subtitle_where_techniques">Пять практик от Барбары Оакли</p>
+      <h2 class="section-title">Техники обучения</h2>
+      <p class="section-subtitle">Пять практик от Барбары Оакли</p>
       <div class="cards">
         <div class="cards__item">
           <img class="cards__image" src="images/images_sprint-2/cards-attention.png" alt="Книга"/>
@@ -97,18 +102,21 @@
     <section class="video">
       <h2 class="section-title">Видео на TED</h2>
       <p class="section-subtitle">Для тех, кто любит прокрастинировать</p>
+      <!-- Вот тут, если делать через списки, то я должен div заменить на ul,
+           а все последующие iframe обернуть в li с классом, который
+           бы отрегулировал размеры и обнулил все лишнее, правильно? -->
       <div class="video__iframes">
-        <iframe class="video__iframe" width="515" height="316"
+        <iframe class="video__iframe"
                 src="https://www.youtube.com/embed/5MgBikgcWnY"
                 allowfullscreen></iframe>
-        <iframe class="video__iframe" width="515" height="316"
+        <iframe class="video__iframe"
                 src="https://www.youtube.com/embed/arj7oStGLkU"
                 allowfullscreen></iframe>
       </div>
     </section>
     <section class="oakley">
       <div class="two-columns">
-        <h3 class="two-columns__brief">История Барбары Оакли.</h3>
+        <h3 class="two-columns__brief">История Барбары Оакли</h3>
         <div class="two-columns__main-text">
           <p class="two-columns__paragraph">
             С детства Барбаре не давалась математика. Она считала
@@ -228,61 +236,61 @@
       <h2 class="section-title section-title_theme_dark">Принципы обучения</h2>
       <p class="section-subtitle section-subtitle_theme_dark">от Джоша Кауфмана</p>
       <div class="table table_theme_dark">
-        <div class="table__cell table__cell_theme_dark">
+        <div class="table__cell_theme_dark">
           <h3 class="table__heading">1</h3>
           <p class="table__text table__text_theme_dark">
             Выберите привлекательный проект.
           </p>
         </div>
-        <div class="table__cell table__cell_theme_dark">
+        <div class="table__cell_theme_dark">
           <h3 class="table__heading">2</h3>
           <p class="table__text table__text_theme_dark">
             Сосредоточьтесь на каком-то одном навыке.
           </p>
         </div>
-        <div class="table__cell table__cell_theme_dark">
+        <div class="table__cell_theme_dark">
           <h3 class="table__heading">3</h3>
           <p class="table__text table__text_theme_dark">
             Определите целевой уровень мастерства.
           </p>
         </div>
-        <div class="table__cell table__cell_theme_dark">
+        <div class="table__cell_theme_dark">
           <h3 class="table__heading">4</h3>
           <p class="table__text table__text_theme_dark">
             Разбейте навык на элементы.
           </p>
         </div>
-        <div class="table__cell table__cell_theme_dark">
+        <div class="table__cell_theme_dark">
           <h3 class="table__heading">5</h3>
           <p class="table__text table__text_theme_dark">
             Приготовьте всё необходимое для занятий.
           </p>
         </div>
-        <div class="table__cell table__cell_theme_dark">
+        <div class="table__cell_theme_dark">
           <h3 class="table__heading">6</h3>
           <p class="table__text table__text_theme_dark">
             Устраните препятствия для занятий.
           </p>
         </div>
-        <div class="table__cell table__cell_theme_dark">
+        <div class="table__cell_theme_dark">
           <h3 class="table__heading">7</h3>
           <p class="table__text table__text_theme_dark">
             Выделите специальное время для занятий.
           </p>
         </div>
-        <div class="table__cell table__cell_theme_dark">
+        <div class="table__cell_theme_dark">
           <h3 class="table__heading">8</h3>
           <p class="table__text table__text_theme_dark">
             Создайте быстрые петли обратной связи.
           </p>
         </div>
-        <div class="table__cell table__cell_theme_dark">
+        <div class="table__cell_theme_dark">
           <h3 class="table__heading">9</h3>
           <p class="table__text table__text_theme_dark">
             Занимайтесь по расписанию, короткими интенсивными интервалами.
           </p>
         </div>
-        <div class="table__cell table__cell_theme_dark">
+        <div class="table__cell_theme_dark">
           <h3 class="table__heading">10</h3>
           <p class="table__text table__text_theme_dark">
             Уделяйте внимание количеству и скорости.
@@ -297,10 +305,18 @@
         Больше материалов о технике и лайфхаках обучения
       </p>
       <div class="resources__logo-zone">
-        <img class="resources__logo" src="images/images_sprint-2/logo/resources-arzamas.svg" alt="Арзамас"/>
-        <img class="resources__logo" src="images/images_sprint-2/logo/resources-n1.svg" alt="Н-1"/>
-        <img class="resources__logo" src="images/images_sprint-2/logo/resources-strelka.svg" alt="Стрелка"/>
-        <img class="resources__logo" src="images/images_sprint-2/logo/resources-polka.svg" alt="Полка"/>
+        <a href="#">
+          <img class="resources__logo" src="images/images_sprint-2/logo/resources-arzamas.svg" alt="Арзамас"/>
+        </a>
+        <a href="#">
+          <img class="resources__logo" src="images/images_sprint-2/logo/resources-n1.svg" alt="Н-1"/>
+        </a>
+        <a href="#">
+          <img class="resources__logo" src="images/images_sprint-2/logo/resources-strelka.svg" alt="Стрелка"/>
+        </a>
+        <a href="#">
+          <img class="resources__logo" src="images/images_sprint-2/logo/resources-polka.svg" alt="Полка"/>
+        </a>
       </div>
     </section>
   </main>
@@ -310,37 +326,41 @@
         <div class="logo logo_place_footer"></div>
         <p class="footer__author">&copy; 2019. Виктор Абанькин</p>
       </div>
-      <nav class="footer__column footer__column_content_info">
+      <div class="footer__column footer__column_content_info">
         <h3 class="footer__column-heading">О Практикуме</h3>
-        <ul class="footer__column-links">
-          <li><a href="#" class="footer__link">Главная</a></li>
-          <li><a href="#" class="footer__link">Концепция</a></li>
-          <li><a href="#" class="footer__link">Наставники</a></li>
-        </ul>
-      </nav>
-      <nav class="footer__column footer__column_content_social">
+        <nav>
+          <ul class="footer__column-links">
+            <li><a href="#" class="footer__link">Главная</a></li>
+            <li><a href="#" class="footer__link">Концепция</a></li>
+            <li><a href="#" class="footer__link">Наставники</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__column footer__column_content_social">
         <h3 class="footer__column-heading">Соцсети</h3>
-        <ul class="footer__column-links">
-          <li><a href="#" class="footer__link">
-            <img src="images/facebook_color_white.svg"
-                 alt="Иконка фейсбука"
-                 class="footer__social-icon">
-            Facebook
-          </a></li>
-          <li><a href="#" class="footer__link">
-            <img src="images/vk_color_white.svg"
-                 alt="Иконка вконтакте"
-                 class="footer__social-icon">
-            ВКонтакте
-          </a></li>
-          <li><a href="#" class="footer__link">
-            <img src="images/instagram_color_white.svg"
-                 alt="Иконка инстаграмма"
-                 class="footer__social-icon">
-            Instagram
-          </a></li>
-        </ul>
-      </nav>
+        <nav>
+          <ul class="footer__column-links">
+            <li><a href="#" class="footer__link">
+              <img src="images/facebook_color_white.svg"
+                   alt="Иконка фейсбука"
+                   class="footer__social-icon">
+              Facebook
+            </a></li>
+            <li><a href="#" class="footer__link">
+              <img src="images/vk_color_white.svg"
+                   alt="Иконка вконтакте"
+                   class="footer__social-icon">
+              ВКонтакте
+            </a></li>
+            <li><a href="#" class="footer__link">
+              <img src="images/instagram_color_white.svg"
+                   alt="Иконка инстаграмма"
+                   class="footer__social-icon">
+              Instagram
+            </a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </footer>
 </div>
